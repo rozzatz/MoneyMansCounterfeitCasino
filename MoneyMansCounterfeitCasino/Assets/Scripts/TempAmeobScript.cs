@@ -7,37 +7,39 @@ public class TempAmeobScript : MonoBehaviour
 {
     private GameManager gm;
 
+    
+
     private LootTable loot;
 
-    public int cost;//delete later
+    public int ameobAmount; //amount of ameobs the holder has
 
 
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         loot = GetComponent<LootTable>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-     
+        if(ameobAmount == 0)
+        {
+            gameObject.SetActive(false);
+
+        }
     }
 
     public void OnMouseDown()
     {
-        if(gm.coins >= cost)
-        {
-            gm.coins -= cost;
-            loot.BasicLootCalc();
+        ameobAmount -= 1;
+        loot.BasicLootCalc();
+        gm.coins += loot.lootResult;
+    }
 
-            gm.coins += loot.lootResult;
-        }
-        else
-        {
-            Debug.Log("I don't deal with poors");
-        }
-            
-        
+    public void TapAmeob()
+    {
+        //transfer onmousedown here later
     }
 }

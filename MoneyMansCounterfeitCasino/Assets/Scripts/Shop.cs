@@ -5,6 +5,8 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
 
+    public GameObject camera;
+
     public GameObject shopWindow;
     // Start is called before the first frame update
     void Start()
@@ -21,11 +23,13 @@ public class Shop : MonoBehaviour
     public void OpenShop()
     {
         shopWindow.SetActive(true);
+        camera.transform.position = new Vector3(0, 1000, -10);
     }
 
     public void CloseShop()
     {
         shopWindow.SetActive(false);
+        camera.transform.position = new Vector3(0, 1, -10);
     }
 
 
