@@ -9,6 +9,13 @@ public class LootboxScript : MonoBehaviour
     public float cost;
     public float rarity;
     public Transform spawnPos;
+    public bool basicAmeob;
+    public bool basicLoot;
+    public bool rareLoot;
+    public bool abnormalLoot;
+    public bool extraordinaryLoot;
+    public bool moneyManLoot;
+
     private GameManager gm;
 
     // Start is called before the first frame update
