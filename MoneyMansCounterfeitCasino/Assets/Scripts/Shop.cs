@@ -33,7 +33,7 @@ public class Shop : MonoBehaviour
             camera.transform.position = new Vector3(0, 1000, -10);
         }
 
-            camera.transform.position = new Vector3(0, 1000, -10);
+            
     }
 
     public void CloseShop()
