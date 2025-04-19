@@ -172,16 +172,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs: []
+  ameobsTypeOne: []
+  rareAmeobs: []
+  uniqueAmeob: {fileID: 0}
+  ameobsTypeTwo: []
   cost: 0
-  rarity: 0
-  spawnPos: {fileID: 0}
-  basicAmeob: 0
   basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
-  extraordinaryLoot: 0
+  extraordinaryLoot: 1
   moneyManLoot: 0
+  lootType:
+  - 1
+  - 30
+  rareLoot:
+  - 31
+  - 70
+  uniqueLoot: 100
+  extraLoot:
+  - 71
+  - 99
 --- !u!114 &22182396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,17 +412,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs:
+  ameobsTypeOne:
+  - {fileID: 1286583200}
+  rareAmeobs:
+  - {fileID: 1286583200}
+  uniqueAmeob: {fileID: 1286583200}
+  ameobsTypeTwo:
   - {fileID: 1286583200}
   cost: 1
-  rarity: 100
-  spawnPos: {fileID: 1893817530}
-  basicAmeob: 0
-  basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
+  basicLoot: 1
   extraordinaryLoot: 0
   moneyManLoot: 0
+  lootType:
+  - 1
+  - 20
+  rareLoot:
+  - 21
+  - 99
+  uniqueLoot: 100
+  extraLoot: []
 --- !u!114 &103269119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,16 +1818,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs: []
+  ameobsTypeOne:
+  - {fileID: 1286583200}
+  rareAmeobs: []
+  uniqueAmeob: {fileID: 0}
+  ameobsTypeTwo: []
   cost: 0
-  rarity: 0
-  spawnPos: {fileID: 0}
-  basicAmeob: 0
-  basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
+  basicLoot: 1
   extraordinaryLoot: 0
   moneyManLoot: 0
+  lootType:
+  - 1
+  - 60
+  rareLoot:
+  - 61
+  - 99
+  uniqueLoot: 100
+  extraLoot: []
 --- !u!114 &346618916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3485,16 +3508,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs: []
+  ameobsTypeOne: []
+  rareAmeobs: []
+  uniqueAmeob: {fileID: 0}
+  ameobsTypeTwo: []
   cost: 0
-  rarity: 0
-  spawnPos: {fileID: 0}
-  basicAmeob: 0
   basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
   extraordinaryLoot: 0
-  moneyManLoot: 0
+  moneyManLoot: 1
+  lootType:
+  - 1
+  - 99
+  rareLoot: []
+  uniqueLoot: 100
+  extraLoot: []
 --- !u!114 &853740783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3867,16 +3894,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs: []
+  ameobsTypeOne: []
+  rareAmeobs: []
+  uniqueAmeob: {fileID: 0}
+  ameobsTypeTwo: []
   cost: 0
-  rarity: 0
-  spawnPos: {fileID: 0}
-  basicAmeob: 0
-  basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
+  basicLoot: 1
   extraordinaryLoot: 0
   moneyManLoot: 0
+  lootType:
+  - 1
+  - 30
+  rareLoot:
+  - 31
+  - 99
+  uniqueLoot: 100
+  extraLoot: []
 --- !u!114 &1040581475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3963,17 +3996,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs:
-  - {fileID: 1286583200}
+  ameobsTypeOne: []
+  rareAmeobs: []
+  uniqueAmeob: {fileID: 0}
+  ameobsTypeTwo: []
   cost: 10
-  rarity: 90
-  spawnPos: {fileID: 1893817530}
-  basicAmeob: 0
   basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
   extraordinaryLoot: 0
   moneyManLoot: 0
+  lootType: []
+  rareLoot: []
+  uniqueLoot: 0
+  extraLoot: []
 --- !u!4 &1056210910
 Transform:
   m_ObjectHideFlags: 0
@@ -5419,17 +5453,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs:
-  - {fileID: 1286583200}
+  ameobsTypeOne: []
+  rareAmeobs: []
+  uniqueAmeob: {fileID: 0}
+  ameobsTypeTwo: []
   cost: 1
-  rarity: 100
-  spawnPos: {fileID: 1893817530}
-  basicAmeob: 0
   basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
   extraordinaryLoot: 0
   moneyManLoot: 0
+  lootType: []
+  rareLoot: []
+  uniqueLoot: 0
+  extraLoot: []
 --- !u!4 &1422280479
 Transform:
   m_ObjectHideFlags: 0
@@ -5999,16 +6034,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleAmeobs: []
+  ameobsTypeOne: []
+  rareAmeobs: []
+  uniqueAmeob: {fileID: 0}
+  ameobsTypeTwo: []
   cost: 0
-  rarity: 0
-  spawnPos: {fileID: 0}
-  basicAmeob: 0
-  basicLoot: 0
-  rareLoot: 0
-  abnormalLoot: 0
+  basicLoot: 1
   extraordinaryLoot: 0
   moneyManLoot: 0
+  lootType:
+  - 1
+  - 70
+  rareLoot:
+  - 71
+  - 99
+  uniqueLoot: 100
+  extraLoot: []
 --- !u!114 &1543310857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7051,7 +7092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1883684145
 MonoBehaviour:
   m_ObjectHideFlags: 0
