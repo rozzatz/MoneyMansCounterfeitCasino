@@ -11,6 +11,7 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
     private AmeobUIScript ameobInfo;
 
     public GameObject infoBackground;
+    public GameObject shop;
     public string ameobityName;
     public string ameobityDesc;
 
@@ -34,7 +35,11 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
             gameObject.SetActive(false);
             infoBackground.SetActive(false);
         }
-        ameobInfo.ameobCount.text = "Ameob Amount: " + ameobAmount;
+        if (shop.activeInHierarchy)
+        {
+            infoBackground.SetActive(false);
+        }
+        
     }
 
     public void OnMouseDown()
@@ -52,7 +57,7 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
         infoBackground.transform.position = new Vector3(gameObject.transform.position.x + 1, gameObject.transform.position.y + 2, gameObject.transform.position.z);
         ameobInfo.ameobName.text = ameobityName;
         ameobInfo.ameobAbility.text = ameobityDesc;
-        
+        ameobInfo.ameobCount.text = "Ameob Amount: " + ameobAmount;
     }
 
     public void TapAmeob()
