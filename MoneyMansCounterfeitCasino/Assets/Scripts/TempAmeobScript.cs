@@ -9,22 +9,33 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
 {
     private GameManager gm;
     private AmeobUIScript ameobInfo;
+    private AbnormalAmeobPowers abnormality;
 
     public GameObject infoBackground;
     public GameObject shop;
+
+    public bool basicorrare;
+    public bool abnormal;
+    public bool extraordinary;
+    public bool unique;
+    
     public string ameobityName;
     public string ameobityDesc;
 
     private LootTable loot;
 
     public int ameobAmount; //amount of ameobs the holder has
-
+    
 
     void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         loot = GetComponent<LootTable>();
         ameobInfo = infoBackground.GetComponent<AmeobUIScript>();
+        if (abnormal)
+        {
+            abnormality = GetComponent<AbnormalAmeobPowers>();
+        }
     }
 
     // Update is called once per frame
@@ -62,14 +73,33 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
 
     public void TapAmeob()
     {
-        //transfer onmousedown here later
-        ameobAmount -= 1;
-        loot.BasicLootCalc();
-        gm.coins += loot.lootResult;
+        if (basicorrare)
+        {
+            
+            if (gm.doubleMoolah == true)
+            {
+                ameobAmount -= 1;
+                loot.BasicLootCalc();
+                gm.coins += loot.lootResult * 2;
+                gm.doubleMoolah = false;
+            }
+            else
+            {
+                ameobAmount -= 1;
+                loot.BasicLootCalc();
+                gm.coins += loot.lootResult;
+            }
+        }
+        else if (abnormal)
+        {
+            abnormality.AbnormalTapAmeob();
+        }
+        
+        
     }
 
     public void Sacrifice()
     {
-        Debug.Log("It's brooces job");
+        ameobAmount -= 1;
     }
 }

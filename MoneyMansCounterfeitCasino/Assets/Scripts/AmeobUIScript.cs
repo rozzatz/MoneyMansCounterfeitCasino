@@ -34,6 +34,7 @@ public class AmeobUIScript : MonoBehaviour
     {
         accessAmeob = GetComponentInParent<TempAmeobScript>(); // same here
         accessAmeob.Sacrifice();
+        ameobCount.text = "Ameob Amount: " + accessAmeob.ameobAmount;
     }
 
 

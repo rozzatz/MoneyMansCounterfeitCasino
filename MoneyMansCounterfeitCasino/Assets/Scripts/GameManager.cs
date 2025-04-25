@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     
     public float quota;
     public float quotaMult;
+    public bool doubleMoolah = false;
     public TMP_Text coinText;
     public TMP_Text roundText;
     public TMP_Text quotatext;
