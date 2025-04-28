@@ -1128,6 +1128,7 @@ MonoBehaviour:
   ameobityName: Blue Ameob
   ameobityDesc: Woah more money and blue guy
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &210301820
 Rigidbody2D:
   serializedVersion: 4
@@ -1324,6 +1325,7 @@ MonoBehaviour:
   ameobityName: Basic Ameob
   ameobityDesc: Makes a random amount of money
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &218747303
 Rigidbody2D:
   serializedVersion: 4
@@ -2936,6 +2938,7 @@ MonoBehaviour:
   ameobityName: Orange Ameob
   ameobityDesc: Woah more money and orange dude
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &560247121
 Rigidbody2D:
   serializedVersion: 4
@@ -3534,6 +3537,7 @@ MonoBehaviour:
   ameobityName: Red Ameob
   ameobityDesc: Woah more money and red dude
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &636860273
 Rigidbody2D:
   serializedVersion: 4
@@ -3864,6 +3868,7 @@ MonoBehaviour:
   ameobityName: Basic Ameob
   ameobityDesc: Makes a random amount of money
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &694761374
 Rigidbody2D:
   serializedVersion: 4
@@ -5772,6 +5777,7 @@ MonoBehaviour:
   ameobityName: Basic Ameob
   ameobityDesc: Makes a random amount of money
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &1286583203
 Rigidbody2D:
   serializedVersion: 4
@@ -6103,6 +6109,7 @@ MonoBehaviour:
   ameobityName: Embrainium
   ameobityDesc: sacrifices 5 basic ameobs for 1 rare ameob
   ameobAmount: 0
+  onTapDelete: 0
 --- !u!50 &1370748946
 Rigidbody2D:
   serializedVersion: 4
@@ -7055,6 +7062,7 @@ MonoBehaviour:
   ameobityName: Green Ameob
   ameobityDesc: Woah more money and green guy
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &1509255835
 Rigidbody2D:
   serializedVersion: 4
@@ -7798,8 +7806,9 @@ MonoBehaviour:
   extraordinary: 0
   unique: 0
   ameobityName: BAM!!Bomb
-  ameobityDesc: Randomly sacrifices an ameob but makes $50
+  ameobityDesc: sacrifices a rareameob and itself but makes $500
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &1658467935
 Rigidbody2D:
   serializedVersion: 4
@@ -8358,8 +8367,9 @@ MonoBehaviour:
   extraordinary: 0
   unique: 0
   ameobityName: Jimmy
-  ameobityDesc: Summons 10 rare ameobs but he dies
+  ameobityDesc: Summons 50 rare ameobs but he dies
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &1722811656
 Rigidbody2D:
   serializedVersion: 4
@@ -8712,6 +8722,7 @@ MonoBehaviour:
   ameobityName: Purple Ameob
   ameobityDesc: Woah more money and purple dude
   ameobAmount: 0
+  onTapDelete: 1
 --- !u!50 &1785441266
 Rigidbody2D:
   serializedVersion: 4

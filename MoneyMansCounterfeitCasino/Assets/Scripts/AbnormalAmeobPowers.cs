@@ -33,7 +33,7 @@ public class AbnormalAmeobPowers : MonoBehaviour
 
             GameObject[] rares = GameObject.FindGameObjectsWithTag("rare");
             int roll = Random.Range(0, rares.Length);
-            gm.coins += 50;
+            gm.coins += 500;
             TempAmeobScript rareScript = rares[roll].GetComponent<TempAmeobScript>();
             rareScript.Sacrifice();
 
@@ -55,13 +55,15 @@ public class AbnormalAmeobPowers : MonoBehaviour
         {
             int roll = Random.Range(0, rareAmeobs.Length);
             rareAmeobs[roll].SetActive(true);
-            rareAmeobs[roll].GetComponent<TempAmeobScript>().ameobAmount += 10;
+            rareAmeobs[roll].GetComponent<TempAmeobScript>().ameobAmount += 50;
 
         }
         else if (cat)
         {
             gm.doubleMoolah = true;
         }
-        ameobScript.ameobAmount -= 1;
+        
+            if (ameobScript.onTapDelete == true)
+            ameobScript.ameobAmount -= 1;
     }
 }

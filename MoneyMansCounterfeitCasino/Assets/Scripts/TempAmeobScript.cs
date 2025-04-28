@@ -25,6 +25,8 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
     private LootTable loot;
 
     public int ameobAmount; //amount of ameobs the holder has
+
+    public bool onTapDelete = true; // bool value that sees if this specific ameob will die if tapped(most abnormal/ameobs with abilities live even with a tap)
     
 
     void Start()
@@ -78,14 +80,16 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
             
             if (gm.doubleMoolah == true)
             {
-                ameobAmount -= 1;
+                if (onTapDelete == true)
+                { ameobAmount -= 1; }
                 loot.BasicLootCalc();
                 gm.coins += loot.lootResult * 2;
                 gm.doubleMoolah = false;
             }
             else
             {
-                ameobAmount -= 1;
+                if (onTapDelete == true)
+                { ameobAmount -= 1; }
                 loot.BasicLootCalc();
                 gm.coins += loot.lootResult;
             }
