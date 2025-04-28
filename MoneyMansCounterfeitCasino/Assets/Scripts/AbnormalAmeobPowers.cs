@@ -44,11 +44,19 @@ public class AbnormalAmeobPowers : MonoBehaviour
             
             GameObject basic = GameObject.FindGameObjectWithTag("basic");
             TempAmeobScript basicScript = basic.GetComponent<TempAmeobScript>();
-            basicScript.ameobAmount -= 5;
-            int roll = Random.Range(0, rareAmeobs.Length);
-            rareAmeobs[roll].SetActive(true);
-            TempAmeobScript addMore = rareAmeobs[roll].GetComponent<TempAmeobScript>();
-            addMore.ameobAmount += 1;
+            if (basicScript.ameobAmount >= 5)
+            {
+                basicScript.ameobAmount -= 5;
+                int roll = Random.Range(0, rareAmeobs.Length);
+                rareAmeobs[roll].SetActive(true);
+                TempAmeobScript addMore = rareAmeobs[roll].GetComponent<TempAmeobScript>();
+                addMore.ameobAmount += 1;
+            }
+            else
+            {
+                ameobScript.ameobAmount -= 1;
+            }
+
 
         }
         else if (jimmy)

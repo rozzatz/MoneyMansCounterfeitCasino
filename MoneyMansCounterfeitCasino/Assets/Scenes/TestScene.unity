@@ -1522,7 +1522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $1000
+  m_text: $200
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $100
+  m_text: $20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4960,7 +4960,7 @@ MonoBehaviour:
   - {fileID: 636860270}
   uniqueAmeob: {fileID: 218747300}
   ameobsTypeTwo: []
-  cost: 100
+  cost: 20
   basicLoot: 1
   extraordinaryLoot: 0
   moneyManLoot: 0
@@ -7531,7 +7531,7 @@ MonoBehaviour:
   - {fileID: 1370748943}
   uniqueAmeob: {fileID: 0}
   ameobsTypeTwo: []
-  cost: 1
+  cost: 200
   basicLoot: 1
   extraordinaryLoot: 0
   moneyManLoot: 0
