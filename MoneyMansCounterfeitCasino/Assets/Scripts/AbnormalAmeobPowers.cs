@@ -28,24 +28,35 @@ public class AbnormalAmeobPowers : MonoBehaviour
 
     public void AbnormalTapAmeob()
     {
+        //checks the type of ameob they are
         if (bamBomb)
         {
-
+            //finds all rare ameobs in the scene and sacrifices itself
             GameObject[] rares = GameObject.FindGameObjectsWithTag("rare");
             int roll = Random.Range(0, rares.Length);
             gm.coins += 500;
             TempAmeobScript rareScript = rares[roll].GetComponent<TempAmeobScript>();
             rareScript.Sacrifice();
+            //if gerald says doublemoolah then double moolah
+            if (gm.doubleMoolah)
+            {
+
+                gm.coins += 500 * 2;
+                
+                rareScript.Sacrifice();
+            }
+            
 
         }
         else if (emBrain)
         {
             
-            
+            //finds the basic ameob and gets the ameob script
             GameObject basic = GameObject.FindGameObjectWithTag("basic");
             TempAmeobScript basicScript = basic.GetComponent<TempAmeobScript>();
             if (basicScript.ameobAmount >= 5)
             {
+                //uses up 5 ameobs but creates a rare ameob.
                 basicScript.ameobAmount -= 5;
                 int roll = Random.Range(0, rareAmeobs.Length);
                 rareAmeobs[roll].SetActive(true);
@@ -54,6 +65,7 @@ public class AbnormalAmeobPowers : MonoBehaviour
             }
             else
             {
+                //if there are less then 5 basics in the scene then embrainium dies and nothing happens
                 ameobScript.ameobAmount -= 1;
             }
 
@@ -61,6 +73,7 @@ public class AbnormalAmeobPowers : MonoBehaviour
         }
         else if (jimmy)
         {
+            //jimmy is op he gives you 50 rares
             int roll = Random.Range(0, rareAmeobs.Length);
             rareAmeobs[roll].SetActive(true);
             rareAmeobs[roll].GetComponent<TempAmeobScript>().ameobAmount += 50;
@@ -68,10 +81,15 @@ public class AbnormalAmeobPowers : MonoBehaviour
         }
         else if (cat)
         {
+            // supposed to be  gerald, he doubles the moolah
             gm.doubleMoolah = true;
         }
         
             if (ameobScript.onTapDelete == true)
+        {
+            //deletes the ameobs
             ameobScript.ameobAmount -= 1;
+        }
+            
     }
 }

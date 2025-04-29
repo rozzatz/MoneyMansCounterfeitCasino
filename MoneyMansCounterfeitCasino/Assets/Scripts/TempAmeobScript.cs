@@ -31,6 +31,7 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
 
     void Start()
     {
+        //gets the game manager, loot script, ameob info background, and abnormal scripts
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         loot = GetComponent<LootTable>();
         ameobInfo = infoBackground.GetComponent<AmeobUIScript>();
@@ -43,11 +44,13 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
     // Update is called once per frame
     void Update()
     {
-        if(ameobAmount == 0)
+        //checks if the ameob amount is 0 or not, and if it is it deactivates the background
+        if(ameobAmount <= 0)
         {
             gameObject.SetActive(false);
             infoBackground.SetActive(false);
         }
+        //checks if the shop is open and closes the info background if it is
         if (shop.activeInHierarchy)
         {
             infoBackground.SetActive(false);
@@ -57,6 +60,7 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
 
     public void OnMouseDown()
     {
+        //sets the infobackground to the ameobs and sets the description and name
         if (infoBackground.activeInHierarchy == true)
         {
             infoBackground.SetActive(false);
@@ -75,9 +79,10 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
 
     public void TapAmeob()
     {
+        //if the ameob is basic or rare, it does this
         if (basicorrare)
         {
-            
+            //if double moolah is active then it doubles the money
             if (gm.doubleMoolah == true)
             {
                 if (onTapDelete == true)
@@ -86,6 +91,7 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
                 gm.coins += loot.lootResult * 2;
                 gm.doubleMoolah = false;
             }
+            //else it just makes a random amount of money
             else
             {
                 if (onTapDelete == true)
@@ -94,6 +100,7 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
                 gm.coins += loot.lootResult;
             }
         }
+        //if the ameob is abnormal it accesses the abnormal script and does the abnormal tap
         else if (abnormal)
         {
             abnormality.AbnormalTapAmeob();
@@ -104,6 +111,12 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
 
     public void Sacrifice()
     {
+        //if the player sacrifices the ameob they lose one ameob
         ameobAmount -= 1;
+        if (gm.ballSack)
+        {
+            ameobAmount -= 1;
+            gm.coins += 50;
+        }
     }
 }

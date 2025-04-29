@@ -8,11 +8,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public float coins;
-    public float roundCount;
+    public int roundCount;
     
     public float quota;
     public float quotaMult;
     public bool doubleMoolah = false;
+    public bool ballSack = false;
+    public bool gameWin;
+    public bool gameLose;
     public TMP_Text coinText;
     public TMP_Text roundText;
     public TMP_Text quotatext;
@@ -24,6 +27,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //sets all the text
         coinText.text = "Coins: " + coins;
         roundText.text = "Round: " + roundCount;
         quotatext.text = "Quota: " + quota;
@@ -31,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     public void EndRound()
     {
+        //the rounds system
         if(coins >= quota)
         {
             roundCount++;

@@ -25,6 +25,7 @@ public class AmeobUIScript : MonoBehaviour
 
     public void TapAmeobButton()
     {
+        //what happens when you press the tap button
         accessAmeob = GetComponentInParent<TempAmeobScript>(); //take the parents tempameob script
         accessAmeob.TapAmeob();
         ameobCount.text = "Ameob Amount: " + accessAmeob.ameobAmount;
@@ -32,6 +33,7 @@ public class AmeobUIScript : MonoBehaviour
 
     public void SacrificeAmeobButton()
     {
+        //what happens when you  sacrifice
         accessAmeob = GetComponentInParent<TempAmeobScript>(); // same here
         accessAmeob.Sacrifice();
         ameobCount.text = "Ameob Amount: " + accessAmeob.ameobAmount;
