@@ -48,6 +48,8 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
         if(ameobAmount <= 0)
         {
             gameObject.SetActive(false);
+            //GetComponent<SpriteRenderer>().enabled = false;
+            //GetComponent<BoxCollider2D>().enabled = false;
             infoBackground.SetActive(false);
         }
         //checks if the shop is open and closes the info background if it is

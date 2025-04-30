@@ -41,7 +41,7 @@ public class AbnormalAmeobPowers : MonoBehaviour
             if (gm.doubleMoolah)
             {
 
-                gm.coins += 500 * 2;
+                gm.coins += 999 * 2;
                 
                 rareScript.Sacrifice();
             }
@@ -53,22 +53,41 @@ public class AbnormalAmeobPowers : MonoBehaviour
             
             //finds the basic ameob and gets the ameob script
             GameObject basic = GameObject.FindGameObjectWithTag("basic");
-            TempAmeobScript basicScript = basic.GetComponent<TempAmeobScript>();
-            if (basicScript.ameobAmount >= 5)
+
+            bool foundScript = basic.TryGetComponent<TempAmeobScript>(out TempAmeobScript component);
+
+            if (foundScript)
             {
-                //uses up 5 ameobs but creates a rare ameob.
-                basicScript.ameobAmount -= 5;
-                int roll = Random.Range(0, rareAmeobs.Length);
-                rareAmeobs[roll].SetActive(true);
-                TempAmeobScript addMore = rareAmeobs[roll].GetComponent<TempAmeobScript>();
-                addMore.ameobAmount += 1;
+                TempAmeobScript basicScript = basic.GetComponent<TempAmeobScript>();
+
+                if (basicScript.ameobAmount >= 5)
+                {
+                    //uses up 5 ameobs but creates a rare ameob.
+                    basicScript.ameobAmount -= 5;
+                    int roll = Random.Range(0, rareAmeobs.Length);
+                    rareAmeobs[roll].SetActive(true);
+                    TempAmeobScript addMore = rareAmeobs[roll].GetComponent<TempAmeobScript>();
+                    addMore.ameobAmount += 1;
+                }
+                else if (basicScript.ameobAmount <= 5)
+                {
+                    //if there are less then 5 basics in the scene then embrainium dies and nothing happens
+                    ameobScript.ameobAmount -= 1;
+                    Debug.Log("we gay");
+                }
+                else
+                {
+                    ameobScript.ameobAmount -= 1;
+                    Debug.Log("im gay");
+
+                }
             }
             else
             {
-                //if there are less then 5 basics in the scene then embrainium dies and nothing happens
-                ameobScript.ameobAmount -= 1;
+                Debug.Log("we both gay");
             }
 
+            
 
         }
         else if (jimmy)
