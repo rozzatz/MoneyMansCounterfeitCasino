@@ -10,6 +10,8 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
     private GameManager gm;
     private AmeobUIScript ameobInfo;
     private AbnormalAmeobPowers abnormality;
+    private ExtraordinaryAmeobs extraa;
+    private UniqueAmeobs uniquity;
 
     public GameObject infoBackground;
     public GameObject shop;
@@ -39,6 +41,14 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
         {
             abnormality = GetComponent<AbnormalAmeobPowers>();
         }
+        if (unique)
+        {
+            uniquity = GetComponent<UniqueAmeobs>();
+        }
+        if (extraordinary)
+        {
+            extraa = GetComponent<ExtraordinaryAmeobs>();
+        }
     }
 
     // Update is called once per frame
@@ -56,6 +66,12 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
         if (shop.activeInHierarchy)
         {
             infoBackground.SetActive(false);
+        }
+
+        if(unique && gameObject.activeInHierarchy)
+        {
+            uniquity.UniquePassive();
+
         }
         
     }
@@ -97,7 +113,9 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
             else
             {
                 if (onTapDelete == true)
-                { ameobAmount -= 1; }
+                { 
+                    ameobAmount -= 1; 
+                }
                 loot.BasicLootCalc();
                 gm.coins += loot.lootResult;
             }
@@ -107,6 +125,14 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
         {
             abnormality.AbnormalTapAmeob();
         }
+        else if(extraordinary)
+        {
+            extraa.ExtraTappy();
+        }
+        else if (unique)
+        {
+            uniquity.UniqueTapAmeob();
+        }
         
         
     }
@@ -114,11 +140,15 @@ public class TempAmeobScript : MonoBehaviour //no longer temporary
     public void Sacrifice()
     {
         //if the player sacrifices the ameob they lose one ameob
-        ameobAmount -= 1;
+        
         if (gm.ballSack)
         {
             ameobAmount -= 1;
             gm.coins += 50;
+        }
+        else
+        {
+            ameobAmount -= 1;
         }
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - InfoBackground
   - rare
   - basic
+  - unique
+  - extra
   layers:
   - Default
   - TransparentFX

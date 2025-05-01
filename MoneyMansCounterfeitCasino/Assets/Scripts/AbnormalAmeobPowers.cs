@@ -33,18 +33,23 @@ public class AbnormalAmeobPowers : MonoBehaviour
         {
             //finds all rare ameobs in the scene and sacrifices itself
             GameObject[] rares = GameObject.FindGameObjectsWithTag("rare");
-            int roll = Random.Range(0, rares.Length);
-            gm.coins += 500;
-            TempAmeobScript rareScript = rares[roll].GetComponent<TempAmeobScript>();
-            rareScript.Sacrifice();
-            //if gerald says doublemoolah then double moolah
-            if (gm.doubleMoolah)
+            
+            if(rares.Length > 0)
             {
-
-                gm.coins += 999 * 2;
-                
+                int roll = Random.Range(0, rares.Length);
+                gm.coins += 999;
+                TempAmeobScript rareScript = rares[roll].GetComponent<TempAmeobScript>();
                 rareScript.Sacrifice();
+                //if gerald says doublemoolah then double moolah
+                if (gm.doubleMoolah)
+                {
+
+                    gm.coins += 999 * 2;
+
+                    rareScript.Sacrifice();
+                }
             }
+            
             
 
         }
@@ -53,11 +58,9 @@ public class AbnormalAmeobPowers : MonoBehaviour
             
             //finds the basic ameob and gets the ameob script
             GameObject basic = GameObject.FindGameObjectWithTag("basic");
-
-            bool foundScript = basic.TryGetComponent<TempAmeobScript>(out TempAmeobScript component);
-
-            if (foundScript)
+            if(basic != null)
             {
+
                 TempAmeobScript basicScript = basic.GetComponent<TempAmeobScript>();
 
                 if (basicScript.ameobAmount >= 5)
@@ -75,19 +78,15 @@ public class AbnormalAmeobPowers : MonoBehaviour
                     ameobScript.ameobAmount -= 1;
                     Debug.Log("we gay");
                 }
-                else
-                {
-                    ameobScript.ameobAmount -= 1;
-                    Debug.Log("im gay");
-
-                }
             }
             else
             {
-                Debug.Log("we both gay");
+                ameobScript.ameobAmount -= 1;
             }
-
             
+
+
+
 
         }
         else if (jimmy)
