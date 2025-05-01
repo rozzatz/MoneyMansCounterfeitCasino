@@ -254,8 +254,8 @@ MonoBehaviour:
   abnormal: 0
   extraordinary: 1
   unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  ameobityName: Ourple
+  ameobityDesc: creates 100 purple ameobs
   ameobAmount: 0
   onTapDelete: 1
 --- !u!114 &19974367
@@ -395,24 +395,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ameobsTypeOne: []
-  rareAmeobs: []
-  uniqueAmeob: {fileID: 0}
+  ameobsTypeOne:
+  - {fileID: 1093974501}
+  - {fileID: 694761371}
+  - {fileID: 1803483410}
+  - {fileID: 19974362}
+  - {fileID: 1964819523}
+  rareAmeobs:
+  - {fileID: 1722811653}
+  - {fileID: 1658467932}
+  - {fileID: 1709736534}
+  - {fileID: 1370748943}
+  uniqueAmeob: {fileID: 121955175}
   ameobsTypeTwo: []
-  cost: 10000
-  basicLoot: 0
-  extraordinaryLoot: 1
+  cost: 2000
+  basicLoot: 1
+  extraordinaryLoot: 0
   moneyManLoot: 0
   lootType:
   - 1
-  - 30
+  - 60
   rareLoot:
-  - 31
-  - 70
-  uniqueLoot: 100
-  extraLoot:
-  - 71
+  - 61
   - 99
+  uniqueLoot: 100
+  extraLoot: []
 --- !u!114 &22182396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,8 +561,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293511413
+  m_fontColor: {r: 0.9622642, g: 0.78524387, b: 0.9118022, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1460,8 +1467,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3309,7 +3316,7 @@ MonoBehaviour:
   - {fileID: 1785441263}
   - {fileID: 636860270}
   - {fileID: 210301817}
-  uniqueAmeob: {fileID: 1658467932}
+  uniqueAmeob: {fileID: 934976614}
   ameobsTypeTwo: []
   cost: 10
   basicLoot: 1
@@ -3469,7 +3476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.2951673, g: 0.4445282, b: 0.9339623, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3783,7 +3790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $10000
+  m_text: $2000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83fb2900b23a2374c8ca81ccfb649733, type: 2}
   m_sharedMaterial: {fileID: 8066370485974716372, guid: 83fb2900b23a2374c8ca81ccfb649733, type: 2}
@@ -4390,8 +4397,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4291818996
+  m_fontColor: {r: 0.95595646, g: 0.9607843, b: 0.8117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4628,8 +4635,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4290230230
+  m_fontColor: {r: 0.8396226, g: 0.7168476, b: 0.7168476, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5327,7 +5334,7 @@ MonoBehaviour:
   extraordinary: 1
   unique: 0
   ameobityName: Xander
-  ameobityDesc: Sacrifices all orange ameobs but for 10 geralds
+  ameobityDesc: Sacrifices all orange ameobs  for 10 geralds
   ameobAmount: 0
   onTapDelete: 1
 --- !u!50 &694761374
@@ -5493,7 +5500,7 @@ MonoBehaviour:
   basicAmeob: {fileID: 0}
   purpleAmeob: {fileID: 0}
   orangeAmeob: {fileID: 560247118}
-  geralds: {fileID: 0}
+  geralds: {fileID: 1709736534}
 --- !u!1 &738012103
 GameObject:
   m_ObjectHideFlags: 0
@@ -6452,11 +6459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02df7d68e302ea2479202bec43bcaee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ameobsTypeOne: []
+  ameobsTypeOne:
+  - {fileID: 1286583200}
   rareAmeobs: []
-  uniqueAmeob: {fileID: 0}
+  uniqueAmeob: {fileID: 1160114223}
   ameobsTypeTwo: []
-  cost: 10
+  cost: 100
   basicLoot: 0
   extraordinaryLoot: 0
   moneyManLoot: 1
@@ -8405,7 +8413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $10???
+  m_text: $100??
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83fb2900b23a2374c8ca81ccfb649733, type: 2}
   m_sharedMaterial: {fileID: 8066370485974716372, guid: 83fb2900b23a2374c8ca81ccfb649733, type: 2}
@@ -8673,7 +8681,7 @@ Transform:
   m_GameObject: {fileID: 1286583200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -2.98, z: 0}
+  m_LocalPosition: {x: -0.14, y: -1.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9371,8 +9379,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4290690810
+  m_fontColor: {r: 0.9811321, g: 0.745105, b: 0.745105, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9492,7 +9500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2830189, g: 0.19458774, b: 0.16470589, a: 1}
+  m_Color: {r: 0.46226418, g: 0.24662371, b: 0.16789782, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10134,7 +10142,7 @@ Transform:
   m_GameObject: {fileID: 1509255832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.33, y: 2.74, z: 0}
+  m_LocalPosition: {x: 5.45, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10601,7 +10609,7 @@ MonoBehaviour:
   - {fileID: 1722811653}
   - {fileID: 1370748943}
   - {fileID: 1709736534}
-  uniqueAmeob: {fileID: 0}
+  uniqueAmeob: {fileID: 147066304}
   ameobsTypeTwo: []
   cost: 200
   basicLoot: 1
@@ -10821,8 +10829,8 @@ MonoBehaviour:
   abnormal: 0
   extraordinary: 1
   unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  ameobityName: Isocule
+  ameobityDesc: 1 blue ameob --> 50 basic ameob
   ameobAmount: 0
   onTapDelete: 1
 --- !u!114 &1570667826
@@ -11460,8 +11468,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11838,7 +11846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1715087720
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11873,7 +11881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.111323066, g: 0.09554112, b: 0.1792453, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12577,7 +12585,7 @@ Transform:
   m_GameObject: {fileID: 1785441263}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.85, y: 1.37, z: 0}
+  m_LocalPosition: {x: 4.2, y: 2.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12715,8 +12723,8 @@ MonoBehaviour:
   abnormal: 0
   extraordinary: 1
   unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  ameobityName: Auros
+  ameobityDesc: Gives some money per rare ameob
   ameobAmount: 0
   onTapDelete: 1
 --- !u!114 &1803483415
@@ -13214,7 +13222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41651833, g: 0.754717, b: 0.5529062, a: 0.95686275}
+  m_Color: {r: 0.607965, g: 0.53640085, b: 0.7735849, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13425,8 +13433,8 @@ MonoBehaviour:
   abnormal: 0
   extraordinary: 1
   unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  ameobityName: Oswald
+  ameobityDesc: Doubles green ameobs
   ameobAmount: 0
   onTapDelete: 1
 --- !u!114 &1964819528
@@ -13582,8 +13590,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
