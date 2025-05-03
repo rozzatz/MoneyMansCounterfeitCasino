@@ -76,16 +76,13 @@ public class AbnormalAmeobPowers : MonoBehaviour
                 {
                     //if there are less then 5 basics in the scene then embrainium dies and nothing happens
                     ameobScript.ameobAmount -= 1;
-                    Debug.Log("we gay");
+                    
                 }
             }
-            else
+            if(basic == null)
             {
                 ameobScript.ameobAmount -= 1;
             }
-            
-
-
 
 
         }

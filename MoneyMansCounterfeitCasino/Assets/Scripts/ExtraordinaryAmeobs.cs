@@ -81,9 +81,10 @@ public class ExtraordinaryAmeobs : MonoBehaviour
         }
         else if (xander)
         {
-            if(orangeAmeob.activeInHierarchy && geralds.activeInHierarchy)
+            if(orangeAmeob.activeInHierarchy)
             {
                 orangeAmeob.GetComponent<TempAmeobScript>().ameobAmount = 0;
+                geralds.SetActive(true);
                 geralds.GetComponent<TempAmeobScript>().ameobAmount += 10;
             }
         }
