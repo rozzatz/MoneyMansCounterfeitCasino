@@ -414,11 +414,13 @@ MonoBehaviour:
   moneyManLoot: 0
   lootType:
   - 1
-  - 60
+  - 50
   rareLoot:
-  - 61
-  - 99
-  uniqueLoot: 100
+  - 51
+  - 90
+  uniqueLoot:
+  - 91
+  - 100
   extraLoot: []
 --- !u!114 &22182396
 MonoBehaviour:
@@ -696,7 +698,7 @@ MonoBehaviour:
   rareLoot:
   - 21
   - 99
-  uniqueLoot: 100
+  uniqueLoot: []
   extraLoot: []
 --- !u!114 &103269119
 MonoBehaviour:
@@ -1030,9 +1032,9 @@ MonoBehaviour:
   basicorrare: 0
   abnormal: 0
   extraordinary: 0
-  unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  unique: 1
+  ameobityName: Wizard
+  ameobityDesc: creats a random ameob
   ameobAmount: 0
   onTapDelete: 1
 --- !u!50 &121955181
@@ -1322,9 +1324,9 @@ MonoBehaviour:
   basicorrare: 0
   abnormal: 0
   extraordinary: 0
-  unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  unique: 1
+  ameobityName: Enormab
+  ameobityDesc: Sacrificing other ameobs makes $50
   ameobAmount: 0
   onTapDelete: 1
 --- !u!50 &147066310
@@ -2055,9 +2057,9 @@ MonoBehaviour:
   basicorrare: 0
   abnormal: 0
   extraordinary: 0
-  unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  unique: 1
+  ameobityName: All Seeing
+  ameobityDesc: Gives a lot of money based on the amount of ameobs present
   ameobAmount: 0
   onTapDelete: 1
 --- !u!50 &218747303
@@ -3324,11 +3326,13 @@ MonoBehaviour:
   moneyManLoot: 0
   lootType:
   - 1
-  - 60
+  - 50
   rareLoot:
-  - 61
-  - 99
-  uniqueLoot: 100
+  - 51
+  - 90
+  uniqueLoot:
+  - 91
+  - 100
   extraLoot: []
 --- !u!114 &346618916
 MonoBehaviour:
@@ -5201,9 +5205,9 @@ MonoBehaviour:
   basicorrare: 0
   abnormal: 0
   extraordinary: 0
-  unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  unique: 1
+  ameobityName: Glytch
+  ameobityDesc: Creates two random uniques
   ameobAmount: 0
   onTapDelete: 1
 --- !u!50 &683379825
@@ -6470,9 +6474,11 @@ MonoBehaviour:
   moneyManLoot: 1
   lootType:
   - 1
-  - 99
+  - 90
   rareLoot: []
-  uniqueLoot: 100
+  uniqueLoot:
+  - 91
+  - 100
   extraLoot: []
 --- !u!114 &853740783
 MonoBehaviour:
@@ -6958,9 +6964,9 @@ MonoBehaviour:
   basicorrare: 0
   abnormal: 0
   extraordinary: 0
-  unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  unique: 1
+  ameobityName: Three Legs
+  ameobityDesc: Duplicates himself every round
   ameobAmount: 0
   onTapDelete: 1
 --- !u!50 &934976620
@@ -7082,11 +7088,13 @@ MonoBehaviour:
   moneyManLoot: 0
   lootType:
   - 1
-  - 30
+  - 20
   rareLoot:
-  - 31
-  - 99
-  uniqueLoot: 100
+  - 21
+  - 90
+  uniqueLoot:
+  - 91
+  - 100
   extraLoot: []
 --- !u!114 &1040581475
 MonoBehaviour:
@@ -7320,7 +7328,7 @@ MonoBehaviour:
   moneyManLoot: 0
   lootType: []
   rareLoot: []
-  uniqueLoot: 0
+  uniqueLoot: []
   extraLoot: []
 --- !u!4 &1056210910
 Transform:
@@ -7779,9 +7787,9 @@ MonoBehaviour:
   basicorrare: 0
   abnormal: 0
   extraordinary: 0
-  unique: 0
-  ameobityName: Basic Ameob
-  ameobityDesc: Makes a random amount of money
+  unique: 1
+  ameobityName: Money Man
+  ameobityDesc: MOOLAH BASED ON ROUND
   ameobAmount: 0
   onTapDelete: 1
 --- !u!50 &1160114229
@@ -9697,7 +9705,7 @@ MonoBehaviour:
   moneyManLoot: 0
   lootType: []
   rareLoot: []
-  uniqueLoot: 0
+  uniqueLoot: []
   extraLoot: []
 --- !u!4 &1422280479
 Transform:
@@ -10617,11 +10625,13 @@ MonoBehaviour:
   moneyManLoot: 0
   lootType:
   - 1
-  - 70
+  - 60
   rareLoot:
-  - 71
-  - 99
-  uniqueLoot: 100
+  - 61
+  - 90
+  uniqueLoot:
+  - 91
+  - 100
   extraLoot: []
 --- !u!114 &1543310857
 MonoBehaviour:

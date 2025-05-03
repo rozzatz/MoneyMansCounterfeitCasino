@@ -20,7 +20,7 @@ public class LootboxScript : MonoBehaviour
 
     public float[] lootType;
     public float[] rareLoot;
-    public float uniqueLoot;
+    public float[] uniqueLoot;
     public float[] extraLoot;
 
     private GameManager gm;
@@ -55,14 +55,14 @@ public class LootboxScript : MonoBehaviour
                     TempAmeobScript rolledAmeob = ameobsTypeOne[ameobRoll].GetComponent<TempAmeobScript>();
                     rolledAmeob.ameobAmount++;
                 }
-                else if(roll <= rareLoot.Max() && roll >= rareLoot.Min())
+                else if (roll <= rareLoot.Max() && roll >= rareLoot.Min())
                 {
                     int rareameobRoll = Random.Range(0, rareAmeobs.Length);
                     rareAmeobs[rareameobRoll].SetActive(true);
                     TempAmeobScript rolledAmeob = rareAmeobs[rareameobRoll].GetComponent<TempAmeobScript>();
                     rolledAmeob.ameobAmount++;
                 }
-                else if(roll == uniqueLoot)
+                else if (roll <= uniqueLoot.Max() && roll >= uniqueLoot.Min()) 
                 {
                     uniqueAmeob.SetActive(true);
                     TempAmeobScript unique = uniqueAmeob.GetComponent<TempAmeobScript>();
@@ -92,7 +92,7 @@ public class LootboxScript : MonoBehaviour
                     TempAmeobScript rolledAmeob = rareAmeobs[extraameobRoll].GetComponent<TempAmeobScript>();
                     rolledAmeob.ameobAmount++;
                 }
-                else if (roll == uniqueLoot)
+                else if (roll <= uniqueLoot.Max() && roll >= uniqueLoot.Min())
                 {
                     uniqueAmeob.SetActive(true);
                     TempAmeobScript unique = uniqueAmeob.GetComponent<TempAmeobScript>();
@@ -105,7 +105,7 @@ public class LootboxScript : MonoBehaviour
                 {
                     Debug.Log("CONFETTI");
                 }
-                else if(roll == uniqueLoot)
+                else if (roll <= uniqueLoot.Max() && roll >= uniqueLoot.Min())
                 {
                     uniqueAmeob.SetActive(true);
                     TempAmeobScript unique = uniqueAmeob.GetComponent<TempAmeobScript>();

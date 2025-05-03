@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        coins = Mathf.Abs(coins);
         //sets all the text
         coinText.text = "Coins: " + coins;
         shopCoins.text = "Coins: " + coins;
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
             roundCount++;
             
 
-            quota *= quotaMult;
+            quota = Mathf.Abs(quota * quotaMult);
             if(roundCount % 10 == 0)
             {
                 gameWin = true;
